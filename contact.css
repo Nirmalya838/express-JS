@@ -1,0 +1,83 @@
+/* CSS for Contact Form */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h2 {
+    margin-top: 0;
+    color: #97820d;
+  }
+  
+  h5 {
+    color: #555;
+  }
+  
+  hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+  }
+  
+  /* Form Styles */
+  form {
+    display: grid;
+    gap: 10px;
+  }
+  
+  .inputname {
+    display: grid;
+    gap: 5px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="date"],
+  input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .block {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color : #dbc441;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #534805;
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .wrapper {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+  
