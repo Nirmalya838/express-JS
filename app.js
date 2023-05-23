@@ -1,8 +1,13 @@
 const path = require('path');
+const ejs = require('ejs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 
+app.set('view engine', 'ejs');
+app.set('views','views');
+
+const errorController = require('./controllers/error');
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
 const loginRoutes = require('./routes/login');
@@ -20,9 +25,7 @@ app.use('/contactus', contactRoutes);
 app.use('/',msgRoutes);
 app.use('/success', successRoutes);
 
-app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname,'views', 'error.html'));
-  });
+app.use(errorController.get404);
   
 
 app.listen(3000);
