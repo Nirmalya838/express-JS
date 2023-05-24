@@ -19,7 +19,15 @@
     </header>
     <main>
         <h1>My products</h1>
-        <p>List of all products...</p>
+        <% if (hasProducts) { %>
+            <ul>
+                <% for (let i = 0; i < prods.length; i++) { %>
+                    <li><%= prods[i].title %></li>
+                <% } %>
+            </ul>
+        <% } else { %>
+            <p>No products available.</p>
+        <% } %>
     </main>
 </body>
 </html>
